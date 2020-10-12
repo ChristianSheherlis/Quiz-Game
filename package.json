@@ -1,7 +1,6 @@
 {
   "name": "template-2020-apcsp",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
@@ -14,5 +13,14 @@
   },
   "devDependencies": {
     "sass": "^1.26.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianSheherlis/Quiz-Game.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChristianSheherlis/Quiz-Game/issues"
+  },
+  "homepage": "https://github.com/ChristianSheherlis/Quiz-Game#readme",
+  "description": ""
 }
