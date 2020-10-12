@@ -19,4 +19,5 @@ function shuffle(array) {
     return array;
   }
 
-  console.log(questionBank)
+  shuffle(questionBank);
+  console.log(questionBank);
