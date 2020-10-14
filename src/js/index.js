@@ -1,4 +1,8 @@
 import { questionBank } from "./Questions";
+//import { DOMSelectors } from " ./DOM"; //it is greying it out cause they are no DOM Selectors YET
+
+//I prefer to keep all my global variables up here, though they can be moved if you'd like
+let questionNumb = 0;
 
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -21,3 +25,10 @@ function shuffle(array) {
 
   shuffle(questionBank);
   console.log(questionBank);
+
+  function nextQuestion(){
+    console.log(questionBank[questionNumb]);
+    questionNumb += 1;
+  }
+  
+  nextQuestion();
