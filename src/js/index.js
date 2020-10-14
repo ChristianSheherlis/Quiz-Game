@@ -1,8 +1,8 @@
 import { questionBank } from "./Questions";
-//import { DOMSelectors } from " ./DOM"; //it is greying it out cause they are no DOM Selectors YET
+import { DOMSelectors } from "./DOM"; //it is greying it out cause they are no DOM Selectors YET
 
 //I prefer to keep all my global variables up here, though they can be moved if you'd like
-let questionNumb = 0;
+let questionNumb = -1;
 
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -23,12 +23,36 @@ function shuffle(array) {
     return array;
   }
 
+//this shuffles both the order of the questions, and the order to the answers to those questions
+function shuffleEntireBank() {
   shuffle(questionBank);
-  console.log(questionBank);
+
+  //this shuffles the order to the answers
+  const shuffledQuiz = questionBank.map((item)=>{
+    item.answers = shuffle(item.answers);
+    return item;
+  })
+
+  console.log(shuffledQuiz);
+
+}
+
+  //after shuffling the question bank the below function will pull the first question
+  //when the function is called again it will call the next question
 
   function nextQuestion(){
-    console.log(questionBank[questionNumb]);
     questionNumb += 1;
+    DOMSelectors.displayContainer.insertAdjacentHTML(
+      "afterbegin", 
+      ` <p class="question">${questionBank[questionNumb].question}</li>
+      <div class="answer-btns">
+          <button>${questionBank[questionNumb].answers[0]}</button>
+          <button>${questionBank[questionNumb].answers[1]}</button>
+          <button>${questionBank[questionNumb].answers[2]}</button>
+          <button>${questionBank[questionNumb].answers[3]}</button>
+      </div>`
+      )
   }
-  
+
+  shuffleEntireBank();
   nextQuestion();
