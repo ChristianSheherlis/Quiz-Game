@@ -1,3 +1,5 @@
+@import "_variables.scss";
+
 :root{
   --main-background: #fceebf;
   --second-color: #fea360;
@@ -8,13 +10,26 @@
   --prime-color: #0a97b7;
 }
 
+html {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
 body {
   background-color: var(--main-background);
   height: 95vh;
 }
 
+.start{
+	text-align: center;
+}
+
 #start-message{
   color: var(--prime-color);
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 #start-button {
@@ -26,7 +41,7 @@ body {
 	cursor:pointer;
 	color:var(--white);
 	font-family:Arial;
-	font-size:17px;
+	font-size: 1.7rem;
 	font-weight:bold;
 	padding:12px 44px;
 	text-decoration:none;
@@ -39,4 +54,39 @@ body {
 #start-button:active {
 	position:relative;
 	top:1px;
+}
+
+.question{
+	font-size: 1.6rem;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+
+.quiz-container{
+	text-align: center;
+}
+
+.answer-btns{
+	display: flex;
+	flex-direction: column;
+	width: 70vw;
+	text-align: center;
+	margin-left: 15%;
+
+	@include desktop{
+		width: 20vw;
+		margin-left: 45%;
+	}
+}
+
+.ans{
+	height: 4vh;
+	width: 70vw;
+	margin-top: 2rem;
+	background-color: #0a97b7;
+	border-radius: 10px;
+
+	@include desktop{
+		width: 10vw;
+	}
 }

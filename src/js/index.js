@@ -46,10 +46,10 @@ function shuffleEntireBank() {
       "afterbegin", 
       ` <p class="question">${questionBank[questionNumb].question}</li>
       <div class="answer-btns">
-          <button>${questionBank[questionNumb].answers[0]}</button>
-          <button>${questionBank[questionNumb].answers[1]}</button>
-          <button>${questionBank[questionNumb].answers[2]}</button>
-          <button>${questionBank[questionNumb].answers[3]}</button>
+          <button class="ans">${questionBank[questionNumb].answers[0]}</button>
+          <button class="ans">${questionBank[questionNumb].answers[1]}</button>
+          <button class="ans">${questionBank[questionNumb].answers[2]}</button>
+          <button class="ans">${questionBank[questionNumb].answers[3]}</button>
       </div>`
       )
   }
