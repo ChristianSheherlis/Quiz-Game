@@ -55,28 +55,3 @@ body {
 .quiz-container {
   text-align: center;
 }
-
-.answer-btns {
-  display: flex;
-  flex-direction: column;
-  width: 70vw;
-  text-align: center;
-  margin-left: 15%;
-
-  @include desktop {
-    width: 20vw;
-    margin-left: 45%;
-  }
-}
-
-.ans {
-  height: 4vh;
-  width: 70vw;
-  margin-top: 2rem;
-  background-color: #0a97b7;
-  border-radius: 10px;
-
-  @include desktop {
-    width: 10vw;
-  }
-}

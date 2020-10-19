@@ -50,13 +50,25 @@ function nextQuestion() {
     "afterbegin",
     ` <p class="question">${questionBank[questionNumb].question}</li>
       <div class="answer-btns">
-          <button class="ans">${questionBank[questionNumb].answers[0]}</button>
-          <button class="ans">${questionBank[questionNumb].answers[1]}</button>
-          <button class="ans">${questionBank[questionNumb].answers[2]}</button>
-          <button class="ans">${questionBank[questionNumb].answers[3]}</button>
+          <div>
+            <input type = "radio" class="first-ans ans" name="answer">
+            <label for="first-ans">${questionBank[questionNumb].answers[0]}</label>
+          </div>
+          <div><input type = "radio" class="second-ans ans" name="answer">
+          <label for="second-ans">${questionBank[questionNumb].answers[1]}</label>
+          </div>
+          <div>
+            <input type = "radio" class="third-ans ans" name="answer">
+            <label for="third-ans">${questionBank[questionNumb].answers[2]}</label>
+          </div>
+          <div>
+            <input type = "radio" class="fourth-ans ans" name="answer">
+            <label for="fourth-ans">${questionBank[questionNumb].answers[3]}</label>
+          </div>
       </div>`
   );
 }
 
 shuffleEntireBank();
+
 nextQuestion();
