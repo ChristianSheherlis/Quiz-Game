@@ -1,3 +1,17 @@
+$colors: (
+    main-background: #fceebf,
+    second-color: #fea360,
+    second-color-overlay: #ed783d,
+    second-color-underlay: #f1651d,
+    second-color-overlay-dk: #fc8260,
+    white: #ffffff,
+    prime-color: #0a97b7,
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
 $desktop: 1100px;
 $laptop: 900px;
 $tablet: 600px;

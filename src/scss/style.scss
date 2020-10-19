@@ -1,15 +1,5 @@
 @import "_variables.scss";
 
-:root{
-  --main-background: #fceebf;
-  --second-color: #fea360;
-  --second-color-overlay: #ed783d;
-  --second-color-underlay: #f1651d;
-  --second-color-overlay-dk: #fc8260;
-  --white: #ffffff;
-  --prime-color: #0a97b7;
-}
-
 html {
 	padding: 0;
 	margin: 0;
@@ -18,7 +8,7 @@ html {
 }
 
 body {
-  background-color: var(--main-background);
+  background-color: color(main-background);
   height: 95vh;
 }
 
@@ -27,29 +17,29 @@ body {
 }
 
 #start-message{
-  color: var(--prime-color);
+  color: color(prime-color);
   font-size: 1.6rem;
   font-family: 'Roboto', sans-serif;
 }
 
 #start-button {
-	box-shadow: 3px 4px 0px 0px var(--second-color-underlay);
-	background-color: var(--second-color);
+	box-shadow: 3px 4px 0px 0px color(second-color-underlay);
+	background-color: color(second-color);
 	border-radius:5px;
-	border:1px solid var(--second-color-overlay);
+	border:1px solid color(second-color-overlay);
 	display:inline-block;
 	cursor:pointer;
-	color:var(--white);
+	color:color(white);
 	font-family:Arial;
 	font-size: 1.7rem;
 	font-weight:bold;
 	padding:12px 44px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px var(--second-color-overlay);
+	text-shadow:0px 1px 0px color(second-color-overlay);
 }
 
 #start-button:hover {
-	background-color: var(--second-color-overlay-dk);
+	background-color: color(second-color-overlay-dk);
 }
 #start-button:active {
 	position:relative;
