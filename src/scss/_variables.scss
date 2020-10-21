@@ -1,35 +1,35 @@
 $colors: (
-    main-background: #fceebf,
-    second-color: #fea360,
-    second-color-overlay: #ed783d,
-    second-color-underlay: #f1651d,
-    second-color-overlay-dk: #fc8260,
-    white: #ffffff,
-    prime-color: #0a97b7,
+  main-background: #fceebf,
+  second-color: #fea360,
+  second-color-overlay: #ed783d,
+  second-color-underlay: #f1651d,
+  second-color-overlay-dk: #fc8260,
+  white: #ffffff,
+  prime-color: #0a97b7,
 );
 
 @function color($color-name) {
-    @return map-get($colors, $color-name);
+  @return map-get($colors, $color-name);
 }
 
 $desktop: 1100px;
 $laptop: 900px;
 $tablet: 600px;
 
-@mixin tablet{
-    @media(min-width: #{$tablet}) {
-        @content;
-    }
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
 }
 
-@mixin laptop{
-    @media(min-width: #{$laptop}) {
-        @content;
-    }
+@mixin laptop {
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
 }
 
-@mixin desktop{
-    @media(min-width: #{$desktop}) {
-        @content;
-    }
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
 }

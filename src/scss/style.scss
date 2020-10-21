@@ -18,11 +18,11 @@ body {
 
 #start-message {
   color: color(prime-color);
-  font-size: 1.6rem;
+  font-size: 3rem;
   font-family: "Roboto", sans-serif;
 }
 
-#start-button {
+.ui-btns {
   box-shadow: 3px 4px 0px 0px color(second-color-underlay);
   background-color: color(second-color);
   border-radius: 5px;
@@ -79,4 +79,9 @@ body {
   @include desktop {
     width: 10vw;
   }
+}
+
+.score {
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
 }
